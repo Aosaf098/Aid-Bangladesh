@@ -30,14 +30,19 @@
           }
         }
     </script>
+    <style>
+        .placeholder-left::placeholder{
+            text-align: left;
+        }
+    </style>
 </head>
-<body>
+<body class="p-0 m-0 box-border">
     <header>
         <!-- Sticky Navbar -->
         <nav>
             <div class="navbar bg-base-100 flex justify-center lg:px-52 px-7 py-6">
                 <div class="navbar-start">
-                    <button class="px-5 lg:py-2 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none hover:bg-green-500">Blog
+                    <button id="blog-btn" class="px-5 lg:py-2 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none hover:bg-green-500 cursor-pointer">Blog
                     </button>
                 </div>
                 <div class="navbar-center">
@@ -46,15 +51,101 @@
                 </div>
                 <div class="navbar-end">
                     <img src="assets/coin.png" alt="">
-                    <h3 class="lg:text-xl text-sm font-bold lg:ml-3 ml-2">5500 BDT</h3>
+                    <h3 id="rem-amount" class="lg:text-xl text-sm font-bold lg:ml-3 ml-2">5500 BDT</h3>
                 </div>
               </div>
               <h3 class="lg:hidden text-2xl font-bold text-center mt-8">Aid Bangladesh</h3>
-              <div class="flex justify-center gap-10 mb-4 mt-4">
-                <button class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">Donation</button>
-                <button class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">History</button>
+              <div class="flex justify-center gap-10 mb-4 mt-4 lg:mt-10">
+                <button id="donation-btn" class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">Donation</button>
+                <button id="history-btn" class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">History</button>
               </div>
         </nav>
     </header>
+    <!-- Donation Cards -->
+    <!-- Card 1 -->
+    <section class="mt-16">
+        <div class="w-[80%] h-auto m-auto flex gap-10 flex-col lg:flex-row lg:px-48 mb-6">
+            <div class="w-full lg:w-[80%] h-auto m-auto">
+                <img src="assets/noakhali.png" alt="" class="lg:w-full lg:h-auto">
+            </div>
+            <div class="w-full h-auto m-auto flex flex-col gap-4 lg:gap-5 pb-4">
+                <!-- Card1 Donation Amount -->
+                <div class="flex gap-2">
+                    <img src="assets/coin.png" alt="" class="w-6 h-auto">
+                    <h4 class="lg:text-xl lg:font-semibold">0 BDT</h4>
+                </div>
+                <!-- Card1 Donation Title -->
+                <div><h3 class="font-bold lg:text-2xl ">Donate for Flood at Noakhali, Bangladesh</h3></div>
+                <!-- Card1 Donation Description -->
+                <div>
+                    <p class="text-justify lg:font-medium">The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                </div>
+                <!-- Card1 Donation Input Field -->
+                <div class="flex justify-center lg:justify-start">
+                    <input class="px-10 py-2 border-2 border-solid border-gray-400 rounded-sm lg:w-[75%] placeholder-gray-500 placeholder-left" type="text" placeholder="Write Donation Amount">
+                </div>
+                <!-- Card1 Donation Button -->
+                <div class="flex">
+                    <button class="bg-primary py-3 px-20 m-auto rounded-lg text-center font-semibold lg:px-60">Donate Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="w-[80%] h-auto m-auto flex gap-10 flex-col lg:flex-row lg:px-48 mb-6">
+            <div class="w-full lg:w-[80%] h-auto m-auto">
+                <img src="assets/feni.png" alt="" class="lg:w-full lg:h-auto">
+            </div>
+            <div class="w-full h-auto m-auto flex flex-col gap-4 lg:gap-5 pb-4">
+                <!-- Card2 Donation Amount -->
+                <div class="flex gap-2">
+                    <img src="assets/coin.png" alt="" class="w-6 h-auto">
+                    <h4 class="lg:text-xl lg:font-semibold">0 BDT</h4>
+                </div>
+                <!-- Card2 Donation Title -->
+                <div><h3 class="font-bold lg:text-2xl ">Donate for Flood at Feni, Bangladesh</h3></div>
+                <!-- Card2 Donation Description -->
+                <div>
+                    <p class="text-justify lg:font-medium">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                </div>
+                <!-- Card2 Donation Input Field -->
+                <div class="flex justify-center lg:justify-start">
+                    <input class="px-10 py-2 border-2 border-solid border-gray-400 rounded-sm lg:w-[75%] placeholder-gray-500 placeholder-left" type="text" placeholder="Write Donation Amount">
+                </div>
+                <!-- Card2 Donation Button -->
+                <div class="flex">
+                    <button class="bg-primary py-3 px-20 m-auto rounded-lg text-center font-semibold lg:px-60">Donate Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="w-[80%] h-auto m-auto flex gap-10 flex-col lg:flex-row lg:px-48 mb-6">
+            <div class="w-full lg:w-[80%] h-auto m-auto">
+                <img src="assets/quota-protest.png" alt="" class="lg:w-full lg:h-auto">
+            </div>
+            <div class="w-full h-auto m-auto flex flex-col gap-4 lg:gap-5 pb-4">
+                <!-- Card3 Donation Amount -->
+                <div class="flex gap-2">
+                    <img src="assets/coin.png" alt="" class="w-6 h-auto">
+                    <h4 class="lg:text-xl lg:font-semibold">0 BDT</h4>
+                </div>
+                <!-- Card3 Donation Title -->
+                <div><h3 class="font-bold lg:text-2xl ">Aid for Injured in the Quota Movement</h3></div>
+                <!-- Card3 Donation Description -->
+                <div>
+                    <p class="text-justify lg:font-medium">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                </div>
+                <!-- Card3 Donation Input Field -->
+                <div class="flex justify-center lg:justify-start">
+                    <input class="px-10 py-2 border-2 border-solid border-gray-400 rounded-sm lg:w-[75%] placeholder-gray-500 placeholder-left" type="text" placeholder="Write Donation Amount">
+                </div>
+                <!-- Card3 Donation Button -->
+                <div class="flex">
+                    <button class="bg-primary py-3 px-20 m-auto rounded-lg text-center font-semibold lg:px-60">Donate Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>
