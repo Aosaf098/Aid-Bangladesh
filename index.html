@@ -24,6 +24,7 @@
                 },
               colors: {
                 clifford: '#da373d',
+                'primary': '#B4F461'
               }
             }
           }
@@ -31,6 +32,29 @@
     </script>
 </head>
 <body>
-    <h1 class="font-lexend text-4xl font-bold">Donate Bangladesh</h1>
+    <header>
+        <!-- Sticky Navbar -->
+        <nav>
+            <div class="navbar bg-base-100 flex justify-center lg:px-52 px-7 py-6">
+                <div class="navbar-start">
+                    <button class="px-5 lg:py-2 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none hover:bg-green-500">Blog
+                    </button>
+                </div>
+                <div class="navbar-center">
+                    <img src="assets/logo.png" alt="" class="lg:w-10 w-8 h-auto">
+                    <h1 class="lg:text-xl font-semibold lg:ml-5 ml-3 hidden lg:block">Aid Bangladesh</h1>
+                </div>
+                <div class="navbar-end">
+                    <img src="assets/coin.png" alt="">
+                    <h3 class="lg:text-xl text-sm font-bold lg:ml-3 ml-2">5500 BDT</h3>
+                </div>
+              </div>
+              <h3 class="lg:hidden text-2xl font-bold text-center mt-8">Aid Bangladesh</h3>
+              <div class="flex justify-center gap-10 mb-4 mt-4">
+                <button class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">Donation</button>
+                <button class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">History</button>
+              </div>
+        </nav>
+    </header>
 </body>
 </html>
