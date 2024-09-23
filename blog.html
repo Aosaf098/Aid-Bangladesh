@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <script src="https://kit.fontawesome.com/b2fde82393.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                fontFamily: {
+                    lexend: ['Lexend', 'sans-serif'],
+                },
+              colors: {
+                clifford: '#da373d',
+                'primary': '#B4F461'
+              }
+            }
+          }
+        }
+    </script>
 </head>
-<body>
-    <h1>Blog</h1>
+<body class="p-0 m-0 box-border">
+    <nav>
+        <div class="navbar grid grid-cols-3 grid-rows-3 lg:grid-rows-2 gap-2 lg:gap-2 lg:justify-items-center pt-4">
+            <div class="navbar-start lg:w-48 w-32">
+                <button id="home-btn" class="px-5 lg:py-2 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none hover:bg-green-500 cursor-pointer m-auto">Home
+                </button>
+            </div>
+            <div class="navbar-center mx-auto">
+                <img src="assets/logo.png" alt="" class="lg:w-10 w-8 h-auto">
+                <h1 class="lg:text-xl font-semibold lg:ml-5 ml-3 hidden lg:block">Aid Bangladesh</h1>
+            </div>
+            <div class="navbar-end lg:w-48 w-28">
+                <img src="assets/coin.png" alt="">
+                <h3 id="total-amount" class="lg:text-xl text-sm font-bold lg:ml-3 ml-2">55000 BDT</h3>
+            </div>
+        </div>
+    </nav>
+    <!-- FAQ Title -->
+    <div class="mb-6 pl-4">
+        <h1 class="text-4xl lg:text-6xl lg:p-6 font-bold lg:text-center">Important FAQ <i class="fa-solid fa-question pl-2"></i></h1>
+    </div>
+    <!-- Accordion -->
+     <section class="p-4 lg:w-1/2 lg:mx-auto lg:p-12">
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+     </section>
+    <script>
+        const homeBtn = document.getElementById('home-btn')
+        homeBtn.addEventListener('click', function() {
+        window.location.href = 'index.html'
+    })
+    </script>
 </body>
 </html>
