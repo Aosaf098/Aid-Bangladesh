@@ -35,3 +35,4 @@ function donationCalculation(donation, id) {
         alert("You don't have sufficient balance")
     }
 }
+
