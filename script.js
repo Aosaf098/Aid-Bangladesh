@@ -1,3 +1,4 @@
+// Blog Button
 const blogBtn = document.getElementById('blog-btn')
 blogBtn.addEventListener('click', function() {
     window.open('blog.html', '_self')
@@ -5,32 +6,41 @@ blogBtn.addEventListener('click', function() {
 
 // Donate Now Buttons
 
-const donateNowButtons = document.querySelectorAll('.donate-now-btn')
+// Noakhali Flood
 
-donateNowButtons.forEach((donateNowButton) => {
-    donateNowButton.addEventListener('click', function(e) {
-        e.preventDefault()
-        // Noakhali
-        let noakhaliInput = getDonateNowInputFieldValue('noakhali-input')
-        const noakhaliDonationAmount = document.getElementById('noakhali-donation-amount')
-        const newNoakhaliDonationAmount = donationAmountStringSplit('noakhali-donation-amount') + noakhaliInput
-        noakhaliDonationAmount.innerText = `${newNoakhaliDonationAmount} BDT`
+document.getElementById('noakhali-donate-now-btn').addEventListener('click', function(e) {
+    e.preventDefault()
 
-        // Feni
-        const feniInput = getDonateNowInputFieldValue('feni-input')
-        const feniDonationAmount = document.getElementById('feni-donation-amount')
-        const newFeniDonationAmount = donationAmountStringSplit('feni-donation-amount') + feniInput
-        feniDonationAmount.innerText = `${newFeniDonationAmount} BDT`
+    const noakhaliInput = getDonateNowInputFieldValue('noakhali-input')
+    document.getElementById('noakhali-input').value = ''
 
-        // Quota
-        const quotaInput = getDonateNowInputFieldValue('quota-input')
-        const quotaDonationAmount = document.getElementById('quota-donation-amount')
-        const newQuotaDonationAmount = donationAmountStringSplit('quota-donation-amount') + quotaInput
-        quotaDonationAmount.innerText = `${newQuotaDonationAmount} BDT`
+    donationCalculation(noakhaliInput, 'noakhali-donation-amount')
 
-
-        console.log(`${noakhaliInput}`);
-        console.log(`${feniInput}`);
-        console.log(`${quotaInput}`);
-    })
 })
+
+// Feni Flood
+
+document.getElementById('feni-donate-now-btn').addEventListener('click', function(e) {
+    e.preventDefault()
+
+    const feniInput = getDonateNowInputFieldValue('feni-input')
+    document.getElementById('feni-input').value = ''
+
+    donationCalculation(feniInput, 'feni-donation-amount')
+
+})
+
+// Quota Movement
+
+document.getElementById('quota-donate-now-btn').addEventListener('click', function(e) {
+    e.preventDefault()
+
+    const quotaInput = getDonateNowInputFieldValue('quota-input')
+    document.getElementById('quota-input').value = ''
+
+    donationCalculation(quotaInput, 'quota-donation-amount')
+
+})
+
+
+
