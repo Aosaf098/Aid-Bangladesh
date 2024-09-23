@@ -43,4 +43,23 @@ document.getElementById('quota-donate-now-btn').addEventListener('click', functi
 })
 
 
+const donationBtn = document.getElementById('donation-btn')
+const historyBtn = document.getElementById('history-btn')
+
+donationBtn.addEventListener('click', function() {
+    document.getElementById('donation').classList.remove('hidden')
+    donationBtn.classList.add('bg-primary')
+    historyBtn.classList.remove('bg-primary')
+    document.getElementById('history').classList.add('hidden')
+})
+
+historyBtn.addEventListener('click', function() {
+    document.getElementById('history').classList.remove('hidden')
+    document.getElementById('history').classList.add('mt-[280px]')
+    historyBtn.classList.add('bg-primary')
+    donationBtn.classList.remove('bg-primary')
+    document.getElementById('donation').classList.add('hidden')
+})
+
+
 

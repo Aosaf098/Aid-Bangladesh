@@ -55,15 +55,15 @@
                 </div>
                 <h3 class="lg:hidden text-2xl font-bold text-center col-span-3 m-auto">Aid Bangladesh</h3>
                 <div class="flex justify-center gap-10 mt-4 col-span-3 row-start-3 lg:col-span-3 lg:w-1/2 lg:mx-auto">
-                  <button id="donation-btn" class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">Donation</button>
-                  <button id="history-btn" class="lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg bg-primary text-black border-none">History</button>
+                  <button id="donation-btn" class="btn lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg text-black border-none">Donation</button>
+                  <button id="history-btn" class="btn lg:px-6 lg:py-2 px-5 py-2 lg:text-xl font-semibold rounded-lg text-black">History</button>
                 </div>
               </div>
         </nav>
     </header>
     <!-- Donation Cards -->
     <!-- Card 1 -->
-    <section class="mt-[280px]">
+    <section id="donation" class="mt-[280px] hidden">
         <div class="w-[80%] h-auto m-auto flex gap-10 flex-col lg:flex-row lg:px-48 mb-6">
             <div class="w-full lg:w-[80%] h-auto m-auto">
                 <img src="assets/noakhali.png" alt="" class="lg:w-full lg:h-auto">
@@ -143,6 +143,11 @@
                     <button id="quota-donate-now-btn" class="bg-primary py-3 px-20 m-auto rounded-lg text-center font-semibold lg:px-60">Donate Now</button>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="history" class="hidden">
+        <div class="w-full h-[200px] border-4 border-solid border-blue-500">
+            <h3>History</h3>
         </div>
     </section>
     <!-- JavaScript File -->

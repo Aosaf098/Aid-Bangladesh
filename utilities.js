@@ -28,7 +28,6 @@ function donationCalculation(donation, id) {
     if (totalAmount >= donation) {
         const newTotalAmount = totalAmount - donation
         document.getElementById('total-amount').innerText = `${newTotalAmount} BDT`
-
         const donationAmount = donationAmountStringSplit(id)
         const newDonationAmount = donationAmount + donation
         document.getElementById(id).innerText = `${newDonationAmount} BDT`
