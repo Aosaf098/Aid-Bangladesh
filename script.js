@@ -15,9 +15,11 @@ document.getElementById('noakhali-donate-now-btn').addEventListener('click', fun
     e.preventDefault()
 
     const noakhaliInput = getDonateNowInputFieldValue('noakhali-input')
-    document.getElementById('noakhali-input').value = ''
+    // document.getElementById('noakhali-input').value = ''
 
     donationCalculation(noakhaliInput, 'noakhali-donation-amount')
+
+    // console.log(createPopup('popup'));
 
     // const historyContent = document.getElementById('history-content')
     const historyTitle = document.getElementById('history-title')
@@ -38,7 +40,6 @@ document.getElementById('noakhali-donate-now-btn').addEventListener('click', fun
     historyTitle.appendChild(historyH3)
     historyTitle.appendChild(historyH5)
     // historyDiv.appendChild(historyTitle)
-    
 
 })
 
@@ -48,7 +49,7 @@ document.getElementById('feni-donate-now-btn').addEventListener('click', functio
     e.preventDefault()
 
     const feniInput = getDonateNowInputFieldValue('feni-input')
-    document.getElementById('feni-input').value = ''
+    // document.getElementById('feni-input').value = ''
 
     donationCalculation(feniInput, 'feni-donation-amount')
 
@@ -78,7 +79,7 @@ document.getElementById('quota-donate-now-btn').addEventListener('click', functi
     e.preventDefault()
 
     const quotaInput = getDonateNowInputFieldValue('quota-input')
-    document.getElementById('quota-input').value = ''
+    // document.getElementById('quota-input').value = ''
 
     donationCalculation(quotaInput, 'quota-donation-amount')
 
@@ -125,6 +126,35 @@ historyBtn.addEventListener('click', function() {
     donationBtn.classList.remove('bg-primary')
     document.getElementById('donation').classList.add('hidden')
 })
+
+// Modal
+
+// document.getElementById('noakhali-donate-now-btn').addEventListener('click', function() {
+//     const modal = document.getElementById('popup')
+//     const overlay = document.querySelector('.overlay')
+//     const closeBtn = document.querySelector('.close-btn')
+
+//     openPopup(modal)
+//     // closePopup(modal)
+
+//     overlay.addEventListener("click", function() {
+//         modal.classList.remove('active')
+//     })
+//     closeBtn.addEventListener('click', function() {
+//         modal.classList.remove('active')
+//     })
+// })
+
+modalMama('noakhali-donate-now-btn', 'noakhali-input')
+modalMama('feni-donate-now-btn', 'feni-input')
+modalMama('quota-donate-now-btn', 'quota-input')
+
+
+
+// document.getElementById('feni-donate-now-btn').addEventListener('click', createPopup('popup'))
+// document.getElementById('quota-donate-now-btn').addEventListener('click', createPopup('popup'))
+
+
 
 
 
