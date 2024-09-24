@@ -36,32 +36,41 @@ function donationCalculation(donation, id) {
     }
 }
 
+// Total Amount Value (Type - Number)
 function getTotalAmount() {
     const totalAmount = donationAmountStringSplit('total-amount')
     return totalAmount
 }
 
+// User Donation Amount (Type - Number)
 function getDonationAmount(id) {
     const inputAmount =  document.getElementById(id).value
     return inputAmount
 }
 
-
+// Open Modal
 function openPopup(modalPop) {
     modalPop.classList.add("active")
 }
 
+// Close Modal
 function closePopup(modalPop) {
     modalPop.classList.remove("active")
 }
+
+// Hide Modal
 function hiddenPopup(modalPop) {
     modalPop.classList.add('hidden')
 }
+
+// Remove Hidden Class 
 function removeHidden(modalPop) {
     modalPop.classList.remove('hidden')
 }
 
-function modalMama(btnId, inputId) {
+
+// Modal
+function modalCode(btnId, inputId) {
     document.getElementById(btnId).addEventListener('click', function() {
         const modal = document.getElementById('popup')
         const overlay = document.querySelector('.overlay')
@@ -91,46 +100,6 @@ function modalMama(btnId, inputId) {
         document.getElementById(inputId).value = ''
     })
 }
-
-// function createPopup(id) {
-//     let popupNode = document.getElementById(id)
-//     let overlay = document.querySelector('.overlay')
-//     let closeBtn = document.querySelector('.close-btn')
-
-//     function openPopup() {
-//         popupNode.classList.add("active")
-//     }
-
-//     function closePopup() {
-//         popupNode.classList.remove("active")
-//     }
-//     overlay.addEventListener("click", closePopup)
-//     closeBtn.addEventListener('click', closePopup)
-//     return openPopup
-// }
-
-
-
-// let popup = createPopup('#popup')
-// 
-
-
-
-
-
-
-{/* <div id="popup" class="popup fixed top-[-100vh] left-0 w-full h-full">
-<div class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 transition-opacity duration-100 ease-in-out delay-200"></div>
-<div class="popup-content absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] lg:w-[95%] w-[80%] lg:max-w-[700px] lg:h-[350px] h-[300px] bg-white p-[25px] rounded-[20px] shadow-[0px_2px_2px_5px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out flex flex-col items-center gap-4 transform scale-110 opacity-0">
-    <h2 class="font-bold lg:text-4xl text-3xl">Congratulations!</h2>
-    <img src="assets/coin.png" alt="">
-    <h4 class="lg:text-xl">You have donated for the Mankind</h4>
-    <h3 class="lg:text-2xl font-semibold text-xl">Successfully</h3>
-    <div class="controls lg:mt-12 mt-6">
-        <button class="close-btn bg-primary py-2 px-4 rounded-md hover:bg-slate-300 cursor-pointer">Close Confirmation</button>
-    </div>
-</div>
-</div> */}
 
 
 

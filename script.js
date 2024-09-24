@@ -5,8 +5,6 @@ blogBtn.addEventListener('click', function() {
     window.location.href = 'blog.html'
 })
 
-
-
 // Donate Now Buttons
 
 // Noakhali Flood
@@ -15,16 +13,10 @@ document.getElementById('noakhali-donate-now-btn').addEventListener('click', fun
     e.preventDefault()
 
     const noakhaliInput = getDonateNowInputFieldValue('noakhali-input')
-    // document.getElementById('noakhali-input').value = ''
 
     donationCalculation(noakhaliInput, 'noakhali-donation-amount')
-
-    // console.log(createPopup('popup'));
-
-    // const historyContent = document.getElementById('history-content')
-
     
-    
+    // History Section
     if (noakhaliInput === 0 || getDonationAmount('noakhali-input') > getTotalAmount() ) {
         // Do Nothing
     } else {
@@ -45,9 +37,6 @@ document.getElementById('noakhali-donate-now-btn').addEventListener('click', fun
         historyTitle.appendChild(historyH5)
     }
 
-
-    // historyDiv.appendChild(historyTitle)
-
 })
 
 // Feni Flood
@@ -56,28 +45,9 @@ document.getElementById('feni-donate-now-btn').addEventListener('click', functio
     e.preventDefault()
 
     const feniInput = getDonateNowInputFieldValue('feni-input')
-    // document.getElementById('feni-input').value = ''
-
     donationCalculation(feniInput, 'feni-donation-amount')
 
-    // const historyTitle = document.getElementById('history-title')
-    // const feniTitle = document.getElementById('feni-title').innerText.slice(10)
-
-    // document.createElement('div')
-    // const historyH3 = document.createElement('h3')
-    // const historyH5 = document.createElement('h5')
-
-
-    // historyH3.innerText = `${feniInput} Taka is Donated for ${feniTitle}`
-    // historyH5.innerText = `${new Date()}`
-    // historyH3.style.fontWeight = '700'
-    // historyH3.style.margin = '10px auto'
-    // historyH5.style.fontWeight = '400'
-    // historyH5.style.fontSize = '0.8rem'
-
-    // historyTitle.appendChild(historyH3)
-    // historyTitle.appendChild(historyH5)
-
+    // History Section
     if (feniInput === 0 || getDonationAmount('feni-input') > getTotalAmount() ) {
         // Do Nothing
     } else {
@@ -97,7 +67,6 @@ document.getElementById('feni-donate-now-btn').addEventListener('click', functio
         historyTitle.appendChild(historyH3)
         historyTitle.appendChild(historyH5)
     }
-
 })
 
 // Quota Movement
@@ -106,10 +75,9 @@ document.getElementById('quota-donate-now-btn').addEventListener('click', functi
     e.preventDefault()
 
     const quotaInput = getDonateNowInputFieldValue('quota-input')
-    // document.getElementById('quota-input').value = ''
-
     donationCalculation(quotaInput, 'quota-donation-amount')
 
+    // History Section
     if (quotaInput === 0 || getDonationAmount('quota-input') > getTotalAmount() ) {
         // Do Nothing
     } else {
@@ -129,7 +97,6 @@ document.getElementById('quota-donate-now-btn').addEventListener('click', functi
         historyTitle.appendChild(historyH3)
         historyTitle.appendChild(historyH5)
     }
-
 })
 
 // Donation & History Buttons
@@ -157,31 +124,10 @@ historyBtn.addEventListener('click', function() {
 })
 
 // Modal
+modalCode('noakhali-donate-now-btn', 'noakhali-input')
+modalCode('feni-donate-now-btn', 'feni-input')
+modalCode('quota-donate-now-btn', 'quota-input')
 
-// document.getElementById('noakhali-donate-now-btn').addEventListener('click', function() {
-//     const modal = document.getElementById('popup')
-//     const overlay = document.querySelector('.overlay')
-//     const closeBtn = document.querySelector('.close-btn')
-
-//     openPopup(modal)
-//     // closePopup(modal)
-
-//     overlay.addEventListener("click", function() {
-//         modal.classList.remove('active')
-//     })
-//     closeBtn.addEventListener('click', function() {
-//         modal.classList.remove('active')
-//     })
-// })
-
-modalMama('noakhali-donate-now-btn', 'noakhali-input')
-modalMama('feni-donate-now-btn', 'feni-input')
-modalMama('quota-donate-now-btn', 'quota-input')
-
-
-
-// document.getElementById('feni-donate-now-btn').addEventListener('click', createPopup('popup'))
-// document.getElementById('quota-donate-now-btn').addEventListener('click', createPopup('popup'))
 
 
 
